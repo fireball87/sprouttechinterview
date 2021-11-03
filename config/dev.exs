@@ -2,8 +2,8 @@ import Config
 
 # Configure your database
 config :tech_interview, TechInterview.Repo,
-  username: "postgres",
-  password: "postgres",
+  username: "synchrocade",
+  password: "indev",
   database: "tech_interview_dev",
   hostname: "localhost",
   show_sensitive_data_on_connection_error: true,
