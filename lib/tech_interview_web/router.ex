@@ -14,11 +14,15 @@ defmodule TechInterviewWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", TechInterviewWeb do
-    pipe_through :browser
 
-    get "/", PageController, :index
+  scope "/" , TechInterviewWeb do
+    pipe_through :browser
+    get "/", DeviceController, :list
+    post "/new", DeviceController, :create
+    get "/new", DeviceController, :new
   end
+
+
 
   # Other scopes may use custom stacks.
   # scope "/api", TechInterviewWeb do

@@ -4,6 +4,7 @@ defmodule TechInterview.Device do
   schema "devices" do
     field :description, :string
     field :grade, :string
+    timestamps()
   end
 
   def changeset(device, params \\ %{}) do

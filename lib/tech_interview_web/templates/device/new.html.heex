@@ -1,0 +1,16 @@
+<!--this isn't ideal but it's much faster to put the JS in the body then put a system for pulling headers by page -->
+
+<p id="question-text">Test</p>
+<a href="#" onclick="RespondYes();" id="yes-link">Yes</a>
+<a href="#" onclick="RespondNo();" id="no-link">No</a>
+
+
+<div id = "form" hidden>
+    <%= form_for @changeset, Routes.device_path(@conn, :create), fn f -> %>
+      Description: <%= text_input f, :description %>
+      Grade: <%= hidden_input f, :grade, id: "form-grade"%>
+      <%= submit "Submit" %>
+    <% end %>
+</div>
+
+<script type="text/javascript" src="/assets/questionare.js"></script>

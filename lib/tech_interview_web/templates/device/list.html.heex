@@ -1,0 +1,7 @@
+
+<%= link "Add New Device", to: Routes.device_path(@conn, :new) %>
+<%= for device <- @devices do %>
+    <div>
+    <%= device.description %> - <%= device.grade %>
+    </div>
+<% end %>
